@@ -3,6 +3,10 @@
 
 ## Write a short comment describing this function
 
+##makeCacheMatrix function returns a list of functions for getting and setting the matrix and its  inverse
+##setInverse() sets inverse and getInverse() gets inverse of the matrix
+##get() returns matrix and set() sets the matrix value
+
 makeCacheMatrix <- function(x = matrix()) {
   i<-NULL
   set<-function(y) {
@@ -24,8 +28,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 
+##cacheSolve is a cache function. it checks if there is an inverse value already else it finds the inverse of a matrix by using solve()
+
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+        ## Returns a matrix that is the inverse of 'x'
   
   i<-x$getInverse()
   if(!is.null(i)){
